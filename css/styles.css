@@ -11,6 +11,8 @@
 body {
     background-color: var(--white);
     font: 1rem/1.5 "Lato", Arial, sans-serif;
+    margin: 0;
+    color: var(--dark);
 }
 
 /* Utility Classes */
@@ -18,6 +20,7 @@ body {
 .inner-container {
     max-width: 1024px;
     margin: auto;
+    padding: 0 1rem;
 }
 
 .sr-only {
@@ -30,27 +33,364 @@ body {
 
 h1 {
     font-family: 'Hurricane', cursive;
+    font-size: 2rem;
 }
 
 
 /* Header */
 
+.sticky-header {
+    background-color: var(--pop);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.sticky-header .inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.logo {
+    text-align: center;
+    flex-grow: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-85%);
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.menu-icon svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.5rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+    color: var(--dark);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.header-right a:hover {
+    background-color: var(--hover);
+}
 
 /* Hero Banner */
+
+.hero-banner {
+    position: relative;
+    color: var(--white);
+    text-align: left;
+    overflow: hidden;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-banner .inner-container {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    transform: translateY(10%);
+    max-width: 90%;
+}
+
+.hero-banner h2 {
+    font-family: 'Hurricane', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-banner p {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+}
+
+.hero-banner .button {
+    background-color: var(--accent);
+    color: var(--dark);
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.hero-banner .button:hover {
+    background-color: var(--hover);
+}
 
 
 /* Parallax */
 
+.parallax-section {
+    position: relative;
+    background-color: #f8e9b0;
+    padding: 2rem 1rem;
+    text-align: center;
+    overflow: hidden;
+}
 
+.parallax-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.parallax-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.parallax-text {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: var(--dark);
+    text-align: right;
+    padding: 1rem;
+    max-width: 90%;
+}
+
+.parallax-text h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.parallax-text p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1rem;
+}
 
 /* Horizontal Scroll */
 
+.product-section {
+    padding: 2rem 1rem;
+    background-color: var(--white);
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
+.product-cards {
+    display: inline-flex;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.product-card {
+    background-color: var(--white);
+    border: 1px solid var(--accent);
+    padding: 1rem;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .category {
+    font-weight: bold;
+    color: var(--pop);
+    margin-bottom: 0.5rem;
+}
+
+.product-card .description {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    min-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    padding: 0 5px;
+}
+
+.cta-button {
+    background-color: var(--accent);
+    color: var(--dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto;
+}
 
 /* Footer */
 
+footer {
+    background-color: var(--pop);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+}
 
+footer h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--hover)
+}
+
+footer a:hover {
+    color: var(--hover);
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer input[type="email"] {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+footer button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent);
+    color: var(--dark);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.disclaimer {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #ccc;
+}
 
 @media screen and (min-width: 50rem) {
+    .inner-container {
+        padding: 0;
+    }
 
+    .sticky-header {
+        padding: 1rem 2rem;
+    }
+
+    .hero-banner .inner-container {
+        left: 10%;
+        bottom: 20%;
+        transform: translateY(0%);
+        max-width: 70%;
+    }
+
+    .parallax-content {
+        flex-direction: row;
+        justify-content: flex-end;
+        text-align: left;
+    }
+
+    .parallax-image {
+        max-width: 50%;
+    }
+
+    .parallax-text {
+        max-width: 50%;
+        padding: 2rem;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .parallax-text h2 {
+        font-size: 2rem;
+    }
+
+    .parallax-text p {
+        font-size: 1.125rem;
+    }
+
+    footer {
+        text-align: left;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
