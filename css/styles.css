@@ -394,3 +394,153 @@ footer button {
         justify-content: space-between;
     }
 }
+
+@media screen and (min-width: 1024px) {
+
+    .inner-container {
+        padding: 0 2rem;
+    }
+
+    /* Header */
+    .sticky-header {
+        padding: 1rem 4rem;
+    }
+
+    .sticky-header .inner-container {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .logo {
+        text-align: center;
+        flex-grow: 1;
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+
+    .menu-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+        height: 600px;
+    }
+
+    .hero-banner .inner-container {
+        bottom: 30%;
+        left: 10%;
+        transform: translateY(0%);
+        max-width: 50%;
+    }
+
+    .hero-banner h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-banner p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-banner .button {
+        padding: 1rem 2rem;
+    }
+
+    /* Parallax Section */
+    .parallax-section {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 0;
+        background-color: var(--accent);
+    }
+
+    .parallax-image {
+        background-image: url('../img/splash.webp');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .parallax-content {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .parallax-section .parallax-image {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .parallax-section .parallax-text {
+        width: 50%;
+        padding-left: 5%;
+        color: var(--dark);
+        text-align: left;
+        margin: 0;
+    }
+
+    .parallax-section .parallax-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .parallax-section .parallax-text p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    /* Horizontal Scroll Section (Product Cards) */
+    .product-section {
+        padding: 4rem 2rem;
+    }
+
+    .product-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-cards {
+        gap: 2rem;
+    }
+
+    .product-card {
+        width: 350px;
+        height: 500px;
+    }
+
+    .product-card img {
+        margin-bottom: 1.5rem;
+    }
+
+    .product-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 4rem 2rem;
+        text-align: left;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-column ul {
+        padding-left: 0;
+    }
+}
